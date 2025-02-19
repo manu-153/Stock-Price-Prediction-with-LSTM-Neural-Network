@@ -33,7 +33,7 @@ This project uses LSTM networks to forecast stock prices. LSTM is a type of recu
 
 3. **Model Building**:
    - The model consists of two LSTM layers followed by dense layers.
-   - It is compiled using the Adam optimizer and mean squared error loss function.
+   - It is compiled using the Adam optimizer & mean squared error loss function.
 
 4. **Model Evaluation**:
    - Predictions are made for the testing dataset.
