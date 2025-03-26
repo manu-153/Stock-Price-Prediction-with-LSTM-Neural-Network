@@ -19,7 +19,7 @@ This project involves predicting stock prices using Long Short-Term Memory (LSTM
 - **Date Range**: From 2014-01-01 to the current date
 
 
-### Model Overview
+### 
 
 This project uses LSTM networks to forecast stock prices. LSTM is a type of recurrent neural network (RNN) that is particularly well-suited for time series prediction tasks.
 
