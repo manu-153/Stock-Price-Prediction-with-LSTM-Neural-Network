@@ -1,3 +1,17 @@
+# Stock Price Prediction Using LSTM
+
+## Project Overview
+This project involves predicting stock prices using Long Short-Term Memory (LSTM) networks. The model has been applied to four different companies to forecast their future stock prices based on historical data.
+
+
+## Companies Analyzed
+
+- **Amazon.com, Inc. (AMZN)**
+- **Apple Inc. (AAPL)**
+- **Google LLC (GOOG)**
+- **Microsoft Corporation (MSFT)**
+
+## Project Details
 
 ### Data Collection
 
