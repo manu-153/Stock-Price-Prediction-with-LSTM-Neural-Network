@@ -1,4 +1,4 @@
-
+### Stock-Price-Prediction-with-LSTM-Neural-Network
 
 ## Project Overview
 This project involves predicting stock prices using Long Short-Term Memory (LSTM) networks. The model has been applied to four different companies to forecast their future stock prices based on historical data.
