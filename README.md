@@ -46,17 +46,21 @@ This project uses LSTM networks to forecast stock prices. LSTM is a type of recu
 
 ## Results
 
-- **Visualizations**: 
-  - The project's output includes visual plots comparing historical stock prices with predicted prices for each of the four companies. These plots help visualize the model's performance in capturing the trends and variations in stock prices.
-  - Graphs of the model's predictions against the actual closing prices are generated, showing how closely the model's predictions align with real-world data.
+* **Visualizations**:
 
-- **Performance Metrics**:
-  - The Root Mean Squared Error (RMSE) is calculated for the model's predictions on the test set. RMSE provides a measure of the average prediction error, helping to assess the model's accuracy.
-  - RMSE values for each company are printed and compared, providing insights into the model's performance across different stocks.
+  * The project outputs visual charts that compare actual historical stock prices with the model’s predicted prices for all four companies. These plots provide an intuitive view of how well the model tracks stock price movements and trends.
+  * Additional graphs display the predicted closing prices alongside the actual values, highlighting the model’s ability to follow real market behavior.
 
-- **Historical Data and Predictions**:
-  - Historical stock price data and the model's predictions are printed for each company. This includes both the raw data and the forecasted values, offering a detailed view of the model's effectiveness.
+* **Performance Metrics**:
 
+  * The Root Mean Squared Error (RMSE) is computed for the predictions on the test dataset. This metric quantifies the average prediction error, serving as a key indicator of model accuracy.
+  * RMSE scores for each company are presented and compared, offering a clear perspective on performance differences across the various stocks.
+
+* **Historical Data and Predictions**:
+
+  * For every company, both historical stock price data and the corresponding predicted values are displayed. This includes original records along with forecasted results, giving a comprehensive view of the model’s predictive strength.
+
+---
 ## Future Improvements
 
 - **Model Enhancements**:
