@@ -5,7 +5,11 @@
 This project focuses on forecasting stock prices by leveraging Long Short-Term Memory (LSTM) networks, a specialized type of recurrent neural network (RNN) well-suited for handling sequential and time-series data. By learning from patterns in historical stock market data, the model aims to generate reliable predictions of future price movements.
 
 To demonstrate its effectiveness, the approach has been applied to the stock price data of four different companies, enabling comparative insights into model performance across varying market behaviors. This project highlights the practical application of deep learning in the domain of financial time-series forecasting, providing a foundation for further exploration into algorithmic trading, investment strategy development, and risk management.
----
+
+
+___
+
+
 ## Companies Analyzed
 
 - **Amazon.com, Inc. (AMZN)**
