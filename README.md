@@ -10,7 +10,7 @@ To demonstrate its effectiveness, the approach has been applied to the stock pri
 ___
 
 
-## Companies Analyzed
+## tech Companies Analyzed
 
 - **Amazon.com, Inc. (AMZN)**
 - **Apple Inc. (AAPL)**
