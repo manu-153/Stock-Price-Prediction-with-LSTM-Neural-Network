@@ -1,92 +1,102 @@
-# Stock Price Prediction using LSTM
+Here's your full content cleaned up and properly formatted in Markdown — with correct syntax, spacing, code blocks, and structure for a clean, professional README:
+
+Stock Price Prediction using LSTM
 This project uses a Long Short-Term Memory (LSTM) neural network to predict stock prices based on historical closing data.
 It downloads stock data using Yahoo Finance, trains a model, and visualizes both actual and predicted prices.
 
-## 📦 Requirements
+📦 Requirements
 Make sure you have the following libraries installed:
 bashDownloadCopy codepip install yfinance numpy pandas matplotlib scikit-learn keras tensorflow
 
-## 📁 Project Overview
-Steps in the code:
+📁 Project Overview
+The code follows these steps:
 
 1. 
 Download Stock Data
-
-Fetches data from Yahoo Finance using the stock symbol (e.g., AMZN).
-Uses a specified date range.
-
+Fetches historical closing prices from Yahoo Finance using a specified stock symbol and date range.
 
 2. 
 Visualize Historical Data
-
-Plots the historical closing prices.
-
+Plots the historical closing price trend over time.
 
 3. 
 Prepare Data for LSTM
 
-Uses only the “Close” column.
-Scales the data between 0 and 1 using MinMaxScaler.
-Creates training sequences with 60 time steps.
+Uses only the 'Close' column.
+Scales the data to range [0, 1] using MinMaxScaler.
+Creates input sequences of 60 time steps to predict the next day’s price.
 
 
 4. 
 Build and Train the Model
 
-A Sequential model with two LSTM layers and Dense output layers.
-Compiled with Adam optimizer and Mean Squared Error loss.
-Trains for 10 epochs.
+A Sequential model with:
+
+Two LSTM layers (128 and 64 units)
+Two Dense layers (25 and 1 unit)
+
+
+Compiled with:
+
+Optimizer: Adam
+Loss: Mean Squared Error
+
+
+Trained for 10 epochs.
 
 
 5. 
 Make Predictions
 
 Predicts future prices on test data.
-Scales predictions back to original prices.
-Calculates RMSE (Root Mean Squared Error).
+Inverse-transforms predictions back to original price scale.
+Calculates RMSE to measure prediction accuracy.
 
 
 6. 
 Visualize the Results
 
-Compares real vs. predicted closing prices.
-Plots them together for evaluation.
+Plots training data, actual test values, and model predictions on the same chart.
+Helps visually assess model performance.
 
 
 
 
-## 🧩 How to Use
+🧩 How to Use
 
 1. 
-Change the Stock Symbol:
+Change the Stock Symbol
 In the code, modify this line:
 pythonDownloadCopy codestock_symbol = 'AMZN'
-Replace 'AMZN' with any valid ticker (e.g., 'AAPL', 'GOOG', 'TSLA', etc.).
+Replace 'AMZN' with any valid stock ticker (e.g., 'AAPL', 'GOOG', 'TSLA', 'NVDA').
 
 2. 
-Run the Script:
-Run it in your Python environment (e.g., Jupyter Notebook or any IDE).
+Run the Script
+Execute the code in your Python environment (Jupyter Notebook, VS Code, PyCharm, etc.).
 
 3. 
-View Results:
-
+View Results
 You’ll see:
 
-A training loss log
-RMSE value
-Graph showing actual vs. predicted stock prices
+Training loss logs for each epoch
+RMSE value (lower = better)
+A plot comparing actual vs. predicted prices
 
 
 
 
+📊 Example Output
 
-
-## 📊 Example Output
-
-* Training Data Length: ~95% of dataset
-* RMSE Example: ≈ 5.10
+* Training Data Length: ~95% of total data points
+* RMSE Example: ≈ 5.10 (USD)
 * Plot Example:
-Compares model predictions with real data for validation.
+
+(Actual plot will appear when you run the code)
+
+
+Note: This model is for educational purposes. Stock markets are highly volatile — predictions are not financial advice.
+Happy Predicting! 🚀
+Simple. Reusable. One file per stock.
 
 
 ## ⚙️ Notes
