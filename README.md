@@ -1,86 +1,96 @@
-# Stock-Price-Prediction-with-LSTM-Neural-Network-model
+# Stock Price Prediction using LSTM
+This project uses a Long Short-Term Memory (LSTM) neural network to predict stock prices based on historical closing data.
+It downloads stock data using Yahoo Finance, trains a model, and visualizes both actual and predicted prices.
 
-## Project Overview
+## 📦 Requirements
+Make sure you have the following libraries installed:
+bashDownloadCopy codepip install yfinance numpy pandas matplotlib scikit-learn keras tensorflow
 
-This project focuses on forecasting stock prices by leveraging Long Short-Term Memory (LSTM) networks, a specialized type of recurrent neural network (RNN) well-suited for handling sequential and time-series data. By learning from patterns in historical stock market data, the model aims to generate reliable predictions of future price movements.
+## 📁 Project Overview
+Steps in the code:
 
-To demonstrate its effectiveness, the approach has been applied to the stock price data of four different companies, enabling comparative insights into model performance across varying market behaviors. This project highlights the practical application of deep learning in the domain of financial time-series forecasting, providing a foundation for further exploration into algorithmic trading, investment strategy development, and risk management.
+1. 
+Download Stock Data
 
-
-___
-
-
-## tech Companies Analyzed
-
-- **Amazon.com, Inc. (AMZN)**
-- **Apple Inc. (AAPL)**
-- **Google LLC (GOOG)**
-- **Microsoft Corporation (MSFT)**
-
-## Project Details
-
-### Data Collection
-
-- **Data Source**: Yahoo Finance
-- **Date Range**: From 2014-01-01 to the current date
+Fetches data from Yahoo Finance using the stock symbol (e.g., AMZN).
+Uses a specified date range.
 
 
-### Model Overview
+2. 
+Visualize Historical Data
 
-This project uses LSTM networks to forecast stock prices. LSTM is a type of recurrent neural network (RNN) that is particularly well-suited for time series prediction tasks.
+Plots the historical closing prices.
 
-### Key Steps
 
-1. **Data Retrieval**: Historical stock data is fetched for each company using the `yfinance` library.
-   
-2. **Data Preparation**:
-   - Data is scaled using `MinMaxScaler`.
-   - Training and testing datasets are created.
-   - The LSTM model is trained on historical stock prices.
+3. 
+Prepare Data for LSTM
 
-3. **Model Building**:
-   - The model consists of two LSTM layers followed by dense layers.
-   - It is compiled using the Adam optimizer & mean squared error loss function.
+Uses only the “Close” column.
+Scales the data between 0 and 1 using MinMaxScaler.
+Creates training sequences with 60 time steps.
 
-4. **Model Evaluation**:
-   - Predictions are made for the testing dataset.
-   - The model's performance is evaluated using RMSE (Root Mean Squared Error).
 
-5. **Visualization**:
-   - Historical and predicted stock prices are visualized.
-   - Performance metrics and predictions are plotted.
+4. 
+Build and Train the Model
 
-## Results
+A Sequential model with two LSTM layers and Dense output layers.
+Compiled with Adam optimizer and Mean Squared Error loss.
+Trains for 10 epochs.
 
-* **Visualizations**:
 
-  * The project outputs visual charts that compare actual historical stock prices with the model’s predicted prices for all four companies. These plots provide an intuitive view of how well the model tracks stock price movements and trends.
-  * Additional graphs display the predicted closing prices alongside the actual values, highlighting the model’s ability to follow real market behavior.
+5. 
+Make Predictions
 
-* **Performance Metrics**:
+Predicts future prices on test data.
+Scales predictions back to original prices.
+Calculates RMSE (Root Mean Squared Error).
 
-  * The Root Mean Squared Error (RMSE) is computed for the predictions on the test dataset. This metric quantifies the average prediction error, serving as a key indicator of model accuracy.
-  * RMSE scores for each company are presented and compared, offering a clear perspective on performance differences across the various stocks.
 
-* **Historical Data and Predictions**:
+6. 
+Visualize the Results
 
-  * For every company, both historical stock price data and the corresponding predicted values are displayed. This includes original records along with forecasted results, giving a comprehensive view of the model’s predictive strength.
+Compares real vs. predicted closing prices.
+Plots them together for evaluation.
 
----
-## Future Improvements
 
-- **Model Enhancements**:
-  - Experiment with different LSTM architectures and hyperparameters (e.g., number of layers, units per layer, dropout rates) to potentially improve the model's performance.
-  - Explore alternative deep learning models or hybrid approaches combining LSTM with other techniques such as attention mechanisms.
 
-- **Feature Engineering**:
-  - Incorporate additional features into the model, such as trading volume, technical indicators (e.g., moving averages, RSI), or macroeconomic factors, to enhance predictive accuracy.
 
-- **Extended Analysis**:
-  - Expand the analysis to include a broader range of companies or different asset classes (e.g., commodities, currencies) to test the model's generalizability.
-  - Consider implementing a backtesting framework to evaluate the model's performance over different historical periods and market conditions.
+## 🧩 How to Use
 
-- **Deployment**:
-  - Develop a web or mobile application for real-time stock price predictions and visualizations.
-  - Integrate the model with financial news sentiment analysis to potentially improve prediction accuracy based on current events.
+1. 
+Change the Stock Symbol:
+In the code, modify this line:
+pythonDownloadCopy codestock_symbol = 'AMZN'
+Replace 'AMZN' with any valid ticker (e.g., 'AAPL', 'GOOG', 'TSLA', etc.).
 
+2. 
+Run the Script:
+Run it in your Python environment (e.g., Jupyter Notebook or any IDE).
+
+3. 
+View Results:
+
+You’ll see:
+
+A training loss log
+RMSE value
+Graph showing actual vs. predicted stock prices
+
+
+
+
+
+
+## 📊 Example Output
+
+* Training Data Length: ~95% of dataset
+* RMSE Example: ≈ 5.10
+* Plot Example:
+Compares model predictions with real data for validation.
+
+
+## ⚙️ Notes
+
+* You can increase the number of epochs to improve accuracy.
+* LSTM performance may vary between stocks — try retraining for each one.
+* The dataset automatically updates with the latest stock data when you run the code.
