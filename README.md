@@ -1,4 +1,4 @@
-## 📁 Project Overview
+## Project Overview
 
 The code follows these steps:
 
@@ -33,7 +33,7 @@ The code follows these steps:
 
 ---
 
-## 🧩 How to Use
+## How to Use
 
 1. **Change the Stock Symbol**  
    In the code, modify this line:  
@@ -52,7 +52,7 @@ The code follows these steps:
 
 ---
 
-## 📊 Example Output  
+## Example Output  
 
 - **Training Data Length:** ~95% of total data points  
 - **RMSE Example:** ≈ 5.10 (USD)  
